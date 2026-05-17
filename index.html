@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>CV – Alfin Dafisq Qotrunnada</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
+:root{
+  --sky:#c8dff5;
+  --sky-mid:#9ec4e8;
+  --sky-deep:#5e96cc;
+  --blue:#3a74b0;
+  --blue-dk:#1e4d7a;
+  --petal:#7ab3e0;
+  --gold:#b8964a;
+  --gold-lt:#e8d5a3;
+  --cream:#f5f0e8;
+  --dark:#1c2b3a;
+  --muted:#5a6e82;
+}
+
+body{
+  font-family:'Lora',Georgia,serif;
+  background:linear-gradient(160deg,#deeaf7 0%,#f0ead8 60%,#e8dfc8 100%);
+  min-height:100vh;
+  padding:2rem 1rem;
+  display:flex;
+  justify-content:center;
+  align-items:flex-start;
+}
+
+.cv{
+  width:100%;max-width:900px;
+  background:var(--cream);
+  border-radius:4px;
+  box-shadow:0 12px 60px rgba(30,77,122,.18);
+  overflow:hidden;
+  animation:fadeUp .8s ease both;
+}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+
+/* ── HEADER ── */
+.header{
+  background:linear-gradient(135deg,#1e4d7a 0%,#3a74b0 50%,#5e96cc 100%);
+  padding:2.5rem 2.5rem 0;
+  position:relative;
+  overflow:hidden;
+}
+
+/* Subtle dot texture */
+.header::before{
+  content:'';position:absolute;inset:0;
+  background:url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='20' cy='20' r='1' fill='rgba(255,255,255,0.04)'/%3E%3C/svg%3E") repeat;
+  pointer-events:none;
+}
+
+/* Gold accent line di bawah header */
+.header::after{
+  content:'';
+  position:absolute;bottom:0;left:0;right:0;
+  height:2px;
+  background:linear-gradient(90deg,transparent,var(--gold),transparent);
+}
+
+/* Dekorasi SVG background header */
+.header-deco{
+  position:absolute;
+  inset:0;
+  width:100%;height:100%;
+  pointer-events:none;
+  z-index:0;
+}
+
+.header-inner{
+  display:flex;align-items:flex-end;gap:2rem;
+  position:relative;z-index:1;
+}
+
+/* ── PROFILE WRAP ── */
+.profile-wrap{
+  position:relative;
+  flex-shrink:0;
+  width:130px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+.profile-img{
+  width:110px;height:110px;
+  border-radius:50%;
+  border:2px solid rgba(255,255,255,.5);
+  box-shadow:
+    0 0 0 3px rgba(184,150,74,.55),
+    0 0 0 5px rgba(184,150,74,.18),
+    0 0 0 7px rgba(184,150,74,.08),
+    0 8px 24px rgba(0,0,0,.25);
+  background:rgba(255,255,255,.12);
+  object-fit:cover;
+  position:relative;z-index:2;
+  margin-bottom:.7rem;
+  display:flex;align-items:center;justify-content:center;
+  color:rgba(255,255,255,.5);
+  font-family:'Cinzel',serif;font-size:1.6rem;
+  overflow:hidden;
+}
+
+.profile-img img{width:100%;height:100%;object-fit:cover;border-radius:50%;}
+
+/* ── HEADER INFO ── */
+.header-info{flex:1;padding-bottom:1.8rem;color:#fff;}
+
+.header-info h1{
+  font-family:'Cinzel',serif;
+  font-size:1.85rem;font-weight:600;
+  letter-spacing:.05em;line-height:1.2;
+  text-shadow:0 2px 8px rgba(0,0,0,.25);
+}
+
+/* Nama aksen emas di baris kedua */
+.header-info h1 span{
+  color:var(--gold-lt);
+}
+
+.tagline{
+  font-size:.83rem;font-style:italic;
+  color:rgba(255,255,255,.7);
+  margin:.4rem 0 1.2rem;letter-spacing:.04em;
+}
+
+.contacts{display:flex;flex-wrap:wrap;gap:.4rem .7rem;}
+
+.pill{
+  display:flex;align-items:center;gap:5px;
+  background:rgba(255,255,255,.13);
+  border:1px solid rgba(255,255,255,.22);
+  border-radius:99px;
+  padding:4px 11px;
+  font-size:.71rem;color:rgba(255,255,255,.88);
+}
+
+.pill svg{width:11px;height:11px;flex-shrink:0;opacity:.75;}
+
+/* ── BODY ── */
+.body{display:grid;grid-template-columns:1fr 255px;}
+
+/* ── MAIN ── */
+.main{
+  padding:2rem 2rem 2rem 2.5rem;
+  border-right:1px solid rgba(94,150,204,.18);
+}
+
+/* ── ASIDE ── */
+.aside{
+  padding:2rem 1.5rem;
+  background:linear-gradient(180deg,#eef4fb 0%,#f5f0e8 100%);
+}
+
+/* ── SECTION TITLE ── */
+.sec-title{
+  font-family:'Cinzel',serif;
+  font-size:.62rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--blue);
+  padding-bottom:.45rem;
+  border-bottom:1.5px solid var(--sky);
+  margin-bottom:1.2rem;
+  display:flex;align-items:center;gap:7px;
+}
+
+/* Gold dot aksen di sec-title */
+.sec-title::before{
+  content:'◆';
+  font-size:.45rem;
+  color:var(--gold);
+  flex-shrink:0;
+}
+
+.section{margin-bottom:2rem;}
+
+/* ── EXP ── */
+.exp-item{margin-bottom:1.2rem;}
+.exp-head{display:flex;justify-content:space-between;align-items:flex-start;gap:.5rem;}
+.exp-role{font-family:'Cinzel',serif;font-size:.79rem;font-weight:600;color:var(--dark);}
+.exp-badge{
+  font-size:.62rem;
+  background:var(--sky);color:var(--blue-dk);
+  border-radius:99px;padding:2px 8px;
+  white-space:nowrap;font-family:'Lora',serif;flex-shrink:0;
+}
+.exp-co{font-size:.74rem;color:var(--muted);margin:.15rem 0 .4rem;font-style:italic;}
+.exp-ul{list-style:none;font-size:.75rem;color:var(--muted);line-height:1.7;}
+.exp-ul li{padding-left:1rem;position:relative;}
+.exp-ul li::before{content:'✦';position:absolute;left:0;font-size:.48rem;color:var(--petal);top:.28rem;}
+
+.divider{border:none;border-top:1px dashed rgba(94,150,204,.28);margin:1.1rem 0;}
+
+/* ── SKILL ── */
+.skill-item{margin-bottom:.9rem;}
+.skill-name{display:flex;justify-content:space-between;font-size:.74rem;color:var(--dark);margin-bottom:.3rem;}
+.skill-bar{height:5px;background:var(--sky);border-radius:99px;overflow:hidden;}
+.skill-fill{height:100%;background:linear-gradient(90deg,var(--blue),var(--petal));border-radius:99px;}
+
+/* ── CERT ── */
+.cert-item{
+  background:rgba(255,255,255,.7);
+  border:1px solid rgba(94,150,204,.22);
+  border-radius:8px;padding:.6rem .8rem;margin-bottom:.6rem;
+}
+.cert-issuer{
+  font-size:.6rem;font-family:'Cinzel',serif;
+  letter-spacing:.1em;color:var(--gold);
+  text-transform:uppercase;margin-bottom:.2rem;
+}
+.cert-name{font-size:.72rem;color:var(--dark);line-height:1.4;}
+
+/* ── HOBBY ── */
+.hobby-wrap{display:flex;flex-wrap:wrap;gap:5px;}
+.hobby-tag{
+  font-size:.69rem;background:var(--sky);color:var(--blue-dk);
+  border-radius:99px;padding:3px 10px;
+}
+
+@media(max-width:640px){
+  .body{grid-template-columns:1fr;}
+  .aside{border-top:1px solid rgba(94,150,204,.2);}
+  .header-inner{flex-direction:column;align-items:center;text-align:center;}
+  .contacts{justify-content:center;}
+  .main{padding:1.5rem;}
+  .aside{padding:1.5rem;}
+}
+</style>
+</head>
+<body>
+<div class="cv">
+
+<!-- ══ HEADER ══ -->
+<header class="header">
+
+  <!-- ── Dekorasi background: garis emas + bunga blur ── -->
+  <svg class="header-deco" viewBox="0 0 900 220" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <filter id="blur-sm"><feGaussianBlur stdDeviation="3"/></filter>
+      <filter id="blur-md"><feGaussianBlur stdDeviation="6"/></filter>
+      <filter id="blur-lg"><feGaussianBlur stdDeviation="12"/></filter>
+      <!-- Gradient emas untuk garis -->
+      <linearGradient id="gold-line" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#c9a96e" stop-opacity="0"/>
+        <stop offset="30%" stop-color="#e8d5a3" stop-opacity=".7"/>
+        <stop offset="70%" stop-color="#c9a96e" stop-opacity=".5"/>
+        <stop offset="100%" stop-color="#b8964a" stop-opacity="0"/>
+      </linearGradient>
+      <linearGradient id="gold-line2" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#b8964a" stop-opacity="0"/>
+        <stop offset="40%" stop-color="#e8d5a3" stop-opacity=".4"/>
+        <stop offset="100%" stop-color="#c9a96e" stop-opacity="0"/>
+      </linearGradient>
+    </defs>
+
+    <!-- ══ GARIS LENGKUNG EMAS majestic ══ -->
+    <!-- Garis besar melengkung bawah -->
+    <path d="M-20,200 Q220,80 450,110 Q680,140 920,60"
+      stroke="url(#gold-line)" stroke-width="1.2" fill="none" opacity=".9"/>
+    <!-- Garis paralel lebih tipis -->
+    <path d="M-20,212 Q230,95 450,122 Q670,150 920,72"
+      stroke="url(#gold-line)" stroke-width=".5" fill="none" opacity=".5"/>
+    <!-- Garis lengkung atas -->
+    <path d="M-20,30 Q200,90 450,55 Q700,20 920,80"
+      stroke="url(#gold-line2)" stroke-width=".8" fill="none" opacity=".6"/>
+    <!-- Garis kecil sudut kanan -->
+    <path d="M720,0 Q820,40 900,20"
+      stroke="#e8d5a3" stroke-width=".6" fill="none" opacity=".35"/>
+    <path d="M740,0 Q840,50 900,35"
+      stroke="#c9a96e" stroke-width=".4" fill="none" opacity=".25"/>
+
+    <!-- ══ BUNGA BLUR — sudut kiri atas ══ -->
+    <!-- Bunga besar blur, sangat transparan -->
+    <g filter="url(#blur-lg)" opacity=".18">
+      <circle cx="60" cy="40" r="28" fill="#9ec4e8"/>
+      <circle cx="60" cy="10" r="20" fill="#b8d8f5"/>
+      <circle cx="88" cy="28" r="20" fill="#9ec4e8"/>
+      <circle cx="76" cy="58" r="20" fill="#b8d8f5"/>
+      <circle cx="44" cy="58" r="20" fill="#9ec4e8"/>
+      <circle cx="32" cy="28" r="20" fill="#b8d8f5"/>
+    </g>
+    <!-- Bunga kecil blur lebih tajam -->
+    <g filter="url(#blur-sm)" opacity=".3">
+      <circle cx="38" cy="18" r="10" fill="#c8dff5"/>
+      <circle cx="38" cy="0"  r="7"  fill="#b8d8f5"/>
+      <circle cx="52" cy="10" r="7"  fill="#c8dff5"/>
+      <circle cx="48" cy="26" r="7"  fill="#b8d8f5"/>
+      <circle cx="28" cy="26" r="7"  fill="#c8dff5"/>
+      <circle cx="24" cy="10" r="7"  fill="#b8d8f5"/>
+    </g>
+    <!-- Kuncup kecil-kecil di sudut -->
+    <g filter="url(#blur-sm)" opacity=".22">
+      <circle cx="10" cy="55" r="14" fill="#9ec4e8"/>
+      <circle cx="10" cy="38" r="10" fill="#b8d8f5"/>
+      <circle cx="24" cy="46" r="10" fill="#9ec4e8"/>
+      <circle cx="18" cy="62" r="10" fill="#b8d8f5"/>
+      <circle cx="2"  cy="62" r="10" fill="#9ec4e8"/>
+    </g>
+
+    <!-- ══ BUNGA BLUR — sudut kanan bawah ══ -->
+    <g filter="url(#blur-lg)" opacity=".15">
+      <circle cx="850" cy="175" r="34" fill="#7ab3e0"/>
+      <circle cx="850" cy="140" r="24" fill="#9ec4e8"/>
+      <circle cx="882" cy="156" r="24" fill="#7ab3e0"/>
+      <circle cx="872" cy="192" r="24" fill="#9ec4e8"/>
+      <circle cx="838" cy="200" r="24" fill="#7ab3e0"/>
+      <circle cx="818" cy="162" r="24" fill="#9ec4e8"/>
+    </g>
+    <g filter="url(#blur-md)" opacity=".25">
+      <circle cx="870" cy="190" r="16" fill="#b8d8f5"/>
+      <circle cx="870" cy="170" r="12" fill="#c8dff5"/>
+      <circle cx="886" cy="180" r="12" fill="#b8d8f5"/>
+      <circle cx="880" cy="200" r="12" fill="#c8dff5"/>
+      <circle cx="858" cy="204" r="12" fill="#b8d8f5"/>
+      <circle cx="854" cy="182" r="12" fill="#c8dff5"/>
+    </g>
+    <!-- Kuncup kecil ujung kanan -->
+    <g filter="url(#blur-sm)" opacity=".2">
+      <circle cx="898" cy="150" r="12" fill="#9ec4e8"/>
+      <circle cx="898" cy="136" r="8"  fill="#b8d8f5"/>
+      <circle cx="908" cy="142" r="8"  fill="#9ec4e8"/>
+      <circle cx="905" cy="156" r="8"  fill="#b8d8f5"/>
+    </g>
+
+    <!-- ══ BUNGA BLUR — sudut kanan atas, lebih kecil ══ -->
+    <g filter="url(#blur-md)" opacity=".2">
+      <circle cx="880" cy="22" r="22" fill="#5e96cc"/>
+      <circle cx="880" cy="2"  r="16" fill="#7ab3e0"/>
+      <circle cx="900" cy="12" r="16" fill="#5e96cc"/>
+      <circle cx="894" cy="36" r="16" fill="#7ab3e0"/>
+      <circle cx="866" cy="38" r="16" fill="#5e96cc"/>
+    </g>
+
+    <!-- ══ BUNGA BLUR — tengah kiri, sangat blur ══ -->
+    <g filter="url(#blur-lg)" opacity=".1">
+      <circle cx="0"   cy="140" r="40" fill="#9ec4e8"/>
+      <circle cx="0"   cy="100" r="28" fill="#b8d8f5"/>
+      <circle cx="34"  cy="120" r="28" fill="#9ec4e8"/>
+      <circle cx="22"  cy="158" r="28" fill="#b8d8f5"/>
+      <circle cx="-18" cy="158" r="28" fill="#9ec4e8"/>
+    </g>
+
+    <!-- ══ TITIK-TITIK bintang emas kecil ══ -->
+    <circle cx="180" cy="25"  r="1.2" fill="#e8d5a3" opacity=".6"/>
+    <circle cx="350" cy="15"  r=".8"  fill="#c9a96e" opacity=".5"/>
+    <circle cx="520" cy="30"  r="1"   fill="#e8d5a3" opacity=".4"/>
+    <circle cx="690" cy="18"  r=".9"  fill="#c9a96e" opacity=".55"/>
+    <circle cx="800" cy="50"  r="1.1" fill="#e8d5a3" opacity=".45"/>
+    <circle cx="100" cy="80"  r=".8"  fill="#c9a96e" opacity=".35"/>
+    <circle cx="430" cy="95"  r="1"   fill="#e8d5a3" opacity=".3"/>
+    <circle cx="760" cy="105" r=".9"  fill="#c9a96e" opacity=".4"/>
+  </svg>
+
+  <div class="header-inner">
+
+    <!-- Profile photo -->
+    <div class="profile-wrap">
+
+      <!--
+        FOTO PROFIL
+        Untuk pakai foto asli, ganti isi div ini dengan:
+        <img src="foto.jpg" alt="Foto Profil">
+        (upload foto.jpg ke repo GitHub yang sama)
+      -->
+      <div class="profile-img">
+        <!-- Kosong: isi inisial sementara atau foto -->
+      </div>
+    </div>
+
+    <!-- ── HEADER INFO ── -->
+    <div class="header-info">
+      <h1>Alfin<br><span>Dafisq Qotrunnada</span></h1>
+      <p class="tagline">Mahasiswa D3 Teknologi Telekomunikasi</p>
+      <div class="contacts">
+        <span class="pill">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="M4 8l8 5 8-5"/></svg>
+          alfindafisq@student.telkomuniversity.ac.id
+        </span>
+        <span class="pill">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.02 1.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.16 6.16l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          +62 812-1304-8180
+        </span>
+        <span class="pill">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 010 20"/></svg>
+          github.com/AlfinDQ
+        </span>
+        <span class="pill">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Bandung, Indonesia
+        </span>
+      </div>
+    </div>
+
+  </div>
+</header>
+
+<!-- ══ BODY ══ -->
+<div class="body">
+
+  <!-- ── MAIN ── -->
+  <main class="main">
+
+    <section class="section">
+      <h2 class="sec-title">Pengalaman Kerja</h2>
+
+      <div class="exp-item">
+        <div class="exp-head">
+          <span class="exp-role">PKL — PT. Dharma Polimetal</span>
+          <span class="exp-badge">Okt 2022 – Jan 2023</span>
+        </div>
+        <p class="exp-co">Bekasi, Indonesia</p>
+        <ul class="exp-ul">
+          <li>Mengelola proses pengemasan produk akhir sesuai standar kualitas perusahaan</li>
+          <li>Memastikan kelengkapan dan keakuratan label serta dokumen pengiriman barang</li>
+        </ul>
+      </div>
+
+      <hr class="divider"/>
+
+      <div class="exp-item">
+        <div class="exp-head">
+          <span class="exp-role">PKL — PT. Shinsei Denshi</span>
+          <span class="exp-badge">Feb 2023 – Mei 2023</span>
+        </div>
+        <p class="exp-co">Bekasi, Indonesia</p>
+        <ul class="exp-ul">
+          <li>Melakukan sortir komponen elektronik berdasarkan spesifikasi teknis yang ditetapkan</li>
+          <li>Memeriksa kualitas produk (quality checking) untuk memastikan zero-defect sebelum pengiriman</li>
+          <li>Menjalankan proses packing akhir sesuai prosedur keamanan dan standar ekspor</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="sec-title">Pendidikan</h2>
+
+      <div class="exp-item">
+        <div class="exp-head">
+          <span class="exp-role">SMK – Elektronika Industri</span>
+          <span class="exp-badge">2021 – 2024</span>
+        </div>
+        <p class="exp-co">SMK Mitra Industri MM2100</p>
+      </div>
+
+      <hr class="divider"/>
+
+      <div class="exp-item">
+        <div class="exp-head">
+          <span class="exp-role">D3 – Teknologi Telekomunikasi</span>
+          <span class="exp-badge">2024 – Sekarang</span>
+        </div>
+        <p class="exp-co">Telkom University</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ── ASIDE ── -->
+  <aside class="aside">
+
+    <section class="section">
+      <h2 class="sec-title">Kemampuan</h2>
+      <div class="skill-item">
+        <div class="skill-name"><span>Electronic &amp; Telecom</span><span>90%</span></div>
+        <div class="skill-bar"><div class="skill-fill" style="width:90%"></div></div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-name"><span>PCB &amp; Antenna Design</span><span>80%</span></div>
+        <div class="skill-bar"><div class="skill-fill" style="width:80%"></div></div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-name"><span>Routing &amp; Networking</span><span>80%</span></div>
+        <div class="skill-bar"><div class="skill-fill" style="width:80%"></div></div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-name"><span>Programming</span><span>70%</span></div>
+        <div class="skill-bar"><div class="skill-fill" style="width:70%"></div></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="sec-title">Sertifikasi</h2>
+      <div class="cert-item">
+        <p class="cert-issuer">Akademik &amp; Prestasi</p>
+        <p class="cert-name">AHM Best Student 2023</p>
+      </div>
+      <div class="cert-item">
+        <p class="cert-issuer">Bahasa</p>
+        <p class="cert-name">JLPT N5 · TOEIC 625 (2022) · TOEIC 655 (2023) · Cambridge A2 Grade A (2024)</p>
+      </div>
+      <div class="cert-item">
+        <p class="cert-issuer">Teknologi</p>
+        <p class="cert-name">ASPERIO Robotic Specialization · AWS Academy Cloud Foundations</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="sec-title">Hobi</h2>
+      <div class="hobby-wrap">
+        <span class="hobby-tag">Gaming</span>
+        <span class="hobby-tag">Badminton</span>
+        <span class="hobby-tag">Wisata Kuliner</span>
+        <span class="hobby-tag">Masak</span>
+        <span class="hobby-tag">Perkembangan Teknologi</span>
+        <span class="hobby-tag">Melihat Langit</span>
+      </div>
+    </section>
+
+  </aside>
+
+</div><!-- /body -->
+</div><!-- /cv -->
+</body>
+</html>
